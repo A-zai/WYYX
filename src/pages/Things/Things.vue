@@ -5,7 +5,7 @@
       <div class="hd">
         <i class="iconfont iconshouye" @click="goHome()"></i>
         <div class="header-content">
-          <div  @click="isFond=true;$router.replace('/things/find')">
+          <div  @click="isFond=true;$router.replace('/things/find/tuijian')">
             <span class="font" :class="{active:isFond}">发现</span>
           </div>
           <div @click="isFond=false;$router.replace('/things/ordershow')">
@@ -61,6 +61,7 @@
     width 100%
     display flex
     flex-direction column
+    // z-index 2
     .hdTop
       display flex
       width 100%

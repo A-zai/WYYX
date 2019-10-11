@@ -13,7 +13,7 @@
     <div class="classify-content">
       <!-- 左 -->
       <div class="content-left">
-        <div class="left">
+        <div class="left" ref="left">
           <ul class="left-list">
             <li class="left-item item-one active">推荐专区</li>
             <li class="left-item">秋冬好物</li>
@@ -34,7 +34,7 @@
       </div>
       <!-- 右 -->
       <div class="content-right">
-        <div class="right">
+        <div class="right" ref="right">
          <div class="RT">
           <div class="List-swiper">
             <div class="swiper-container">
@@ -113,11 +113,11 @@
       //滑动
       this.$nextTick(() => {
         if (!this.BScroll) {
-          this.BScroll = new BScroll('.left',{
+          this.BScroll = new BScroll(this.$refs.left,{
             click:true,
             scrollY:true
           }),
-          this.BScroll = new BScroll('.right',{
+          this.BScroll = new BScroll(this.$refs.right,{
             click:true,
             scrollY:true
           })

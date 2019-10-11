@@ -83,10 +83,11 @@
 
 <script type="text/ecmascript-6">
 import BScroll from 'better-scroll'
+// import {mapState} from 'vuex'
   export default {
     data() {
       return {
-        isShow:true, //显示隐藏
+        isShow:false, //显示隐藏
       }
     },
     methods: {
@@ -96,6 +97,7 @@ import BScroll from 'better-scroll'
       // }
     },
     mounted() {
+      // this.$store.dispath('方法名称')
       this.$nextTick( () =>{
         if (!this.BScroll) {
           this.BScroll = new BScroll(this.$refs.slide,{
@@ -111,6 +113,7 @@ import BScroll from 'better-scroll'
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixins.styl"
   .head
+    // position fixed
     .header-box
       // bottom-border-1px(#e4e4e4)
       width 100%
@@ -162,6 +165,7 @@ import BScroll from 'better-scroll'
       display flex
       width 100%
       position relative
+      background-color #fff
       .inner
         width 476px
         // width 100%
@@ -210,7 +214,7 @@ import BScroll from 'better-scroll'
         width 100%
         color #333
         background #fff
-        // z-index 2
+        z-index 2
         .top
           .title 
             height 46px

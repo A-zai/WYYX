@@ -9,7 +9,7 @@
         <i class="u-icon" :class="$route.path.includes('/classify') ? 'u-icon-tabBar-cate-active' : 'u-icon-tabBar-cate'"></i>
         <span class="txt">分类</span>
       </li>
-      <li class="footer-item" :class="{active: $route.path.includes('/things')}" v-on:click="$router.replace('/things/find')">
+      <li class="footer-item" :class="{active: $route.path.includes('/things')}" v-on:click="$router.replace('/things/find/tuijian')">
         <i class="u-icon" :class="$route.path.includes('/things') ? 'u-icon-tabBar-topic-active' : 'u-icon-tabBar-topic'"></i>
         <span class="txt">识物</span>
       </li>
